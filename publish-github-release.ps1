@@ -18,10 +18,19 @@ if ($currentBranch -ne "github-release") {
 }
 
 $keep = @("README.md", "LICENSE", "publish-github-release.ps1")
+$keepPrefixes = @("screenshots/")
+
+function Test-Kept($path) {
+    if ($keep -contains $path) { return $true }
+    foreach ($prefix in $keepPrefixes) {
+        if ($path.StartsWith($prefix)) { return $true }
+    }
+    return $false
+}
 
 # Bring every tracked file from main up to date on this branch, except the ones we keep as-is.
 git ls-tree -r main --name-only | ForEach-Object {
-    if ($keep -notcontains $_) {
+    if (-not (Test-Kept $_)) {
         git checkout main -- $_
     }
 }
@@ -29,7 +38,7 @@ git ls-tree -r main --name-only | ForEach-Object {
 # Remove anything this branch tracks that main no longer has (excluding kept files).
 $mainFiles = git ls-tree -r main --name-only
 git ls-tree -r HEAD --name-only | ForEach-Object {
-    if (($keep -notcontains $_) -and ($mainFiles -notcontains $_)) {
+    if ((-not (Test-Kept $_)) -and ($mainFiles -notcontains $_)) {
         git rm -q -- "$_"
     }
 }

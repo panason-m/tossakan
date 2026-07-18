@@ -9,6 +9,17 @@ machine, full stop.
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Status](https://img.shields.io/badge/status-v1.0%20Beta-orange)
 
+## Screenshots
+
+| | |
+|---|---|
+| ![Your boards](screenshots/boards-home.png) | ![A board in action](screenshots/board-view.png) |
+| Your boards, at a glance | A board in action: lists, cards, checklist progress, and Quick View |
+
+![Card detail](screenshots/card-detail.png)
+
+Full card detail: labels, due date, cover color, checklists, and attachments.
+
 ## Why this exists
 
 Most kanban tools push you toward a hosted account, a subscription, and your task data living on
