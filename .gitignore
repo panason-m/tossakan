@@ -1,0 +1,16 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+
+# Self-contained publish output (regenerate with publish.ps1; not source)
+publish/
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.user
+*.suo
+
+# OS cruft
+Thumbs.db
+.DS_Store

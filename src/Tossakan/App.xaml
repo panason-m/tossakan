@@ -1,0 +1,26 @@
+<Application
+    x:Class="Tossakan.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="using:Tossakan.Converters">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+            </ResourceDictionary.MergedDictionaries>
+            <converters:ColorToBrushConverter x:Key="ColorToBrush" />
+            <converters:BoardBackgroundConverter x:Key="BoardBackground" />
+            <converters:MarkdownConverter x:Key="Markdown" />
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Key="ListSurfaceBrush" Color="#F1F2F4" />
+                    <SolidColorBrush x:Key="CardSurfaceBrush" Color="#FFFFFF" />
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Dark">
+                    <SolidColorBrush x:Key="ListSurfaceBrush" Color="#161A1D" />
+                    <SolidColorBrush x:Key="CardSurfaceBrush" Color="#22272B" />
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
