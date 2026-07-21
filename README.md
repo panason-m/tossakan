@@ -7,7 +7,15 @@ machine, full stop.
 ![Platform](https://img.shields.io/badge/platform-Windows-0078D6)
 ![.NET](https://img.shields.io/badge/.NET-8-512BD4)
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Status](https://img.shields.io/badge/status-v1.0%20Beta-orange)
+![Status](https://img.shields.io/badge/status-v1.1%20Beta-orange)
+
+## Download
+
+Grab a ready to run build from the [Releases page](https://github.com/panason-m/tossakan/releases)
+— download the zip, extract it anywhere, and run `Tossakan.exe`. No installer, no .NET SDK
+required; the build is self contained.
+
+Prefer to build it yourself? See [Getting started](#getting-started) below.
 
 ## Screenshots
 
